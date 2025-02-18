@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -E $CFILE mv .o .c
+gcc -E $CFILE mv c.o c.c

@@ -5,7 +5,6 @@
  */
 int main(void)
 {
-	size_t type_sizes[] = sizeof(int);
-
+	printf("Size of char: %zu bytes\n", sizeof(char));
 	return (0);
 }

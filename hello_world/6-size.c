@@ -5,7 +5,8 @@
  */
 int main(void)
 {
-	printf("Size of char: %zu byte(s)\n", sizeof(char));
+	printf("Size of data types on this sytem:\n");
+	printf("char: %zu byte(s)\n", sizeof(char));
 	return (0);
 }
 

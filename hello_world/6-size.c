@@ -5,7 +5,10 @@
  */
 int main(void)
 {
-	printf("Size of data types on this sytem:\n");
+	printf("float: %zu byte(s)\n", sizeof(float));
+	printf("long long int: %zu byte(s)\n", sizeof(long long int));
+	printf("long int: %zu byte(s)\n" sizeof(long int));
+	printf("int: %zu byte(s)\n", sizeof(int));
 	printf("char: %zu byte(s)\n", sizeof(char));
 	return (0);
 }

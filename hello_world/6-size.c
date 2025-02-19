@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stddef.h>
 /**
  * main - Entry point
  * Return: Always 0 (Success)
@@ -8,10 +7,6 @@ int main(void)
 {
 	size_t size_of_int = sizeof(int);
 
-	printf("float: %zu byte(s)\n", sizeof(float));
-	printf("long long int: %zu byte(s)\n", sizeof(long long int));
-	printf("long int: %zu byte(s)\n", sizeof(long int));
-	printf("int: %zu byte(s)\n", sizeof(int));
-	printf("char: %zu byte(s)\n", sizeof(char));
+	printf("Size of int: %zu bytes\n", size_of_int);
 	return (0);
 }

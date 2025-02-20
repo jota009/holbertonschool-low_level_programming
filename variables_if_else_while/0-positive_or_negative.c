@@ -1,44 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-/* more headers goes there */
 
-/* betty style doc for function main goes there */
-int check_sign(int num);
+/**
+ * main - Entry point working with variables if, for, while
+ *
+ * Return: Always 0
+ */
+
+int main(void)
 {
-	if (num > 0)
-	{
-		return (1);
-	}
-	else if (num < 0)
-	{
-		return (-1);
+	int n;
 
-		else
-		{
-			return (0);
-		}
-	}
-
-	int main(void);
-	{
-		srand(time(0));
-		int n = rand() % 201 - 100;
-		int result = check_sign(n);
-
-		printf("Generated number: %d\n", n);
-
-		if (result == 1)
-		{
-			printf("Positive\n");
-		}
-		else if (result == -1)
-		{
-			printf("Negative\n");
-		}
-		else
-		{
-			printf("Zero\n");
-		}
-		return (0);
-	}
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive\n", n);
+	else if (n == 0)
+		printf("%d is zero\n", n);
+	else
+		printf("%d is negative\n", n);
+	return (0);
+}

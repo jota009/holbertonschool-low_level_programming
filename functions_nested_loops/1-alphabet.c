@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_alphabet - Printing the alphabet
+ * print_alphabet - Printing the Alphabet
  */
 void print_alphabet(void)
+
 {
 	int abc;
 

@@ -1,0 +1,40 @@
+diff --git a/betty b/betty
+deleted file mode 100755
+index 217c75c..0000000
+--- a/betty
++++ /dev/null
+@@ -1,21 +0,0 @@
+-#!/bin/bash
+-# Simply a wrapper script to keep you from having to use betty-style
+-# and betty-doc separately on every item.
+-# Originally by Tim Britton (@wintermanc3r), multiargument added by
+-# Larry Madeo (@hillmonkey)
+-
+-BIN_PATH="/usr/local/bin"
+-BETTY_STYLE="betty-style"
+-BETTY_DOC="betty-doc"
+-
+-if [ "$#" = "0" ]; then
+-    echo "No arguments passed."
+-    exit 1
+-fi
+-
+-for argument in "$@" ; do
+-    echo -e "\n========== $argument =========="
+-    ${BIN_PATH}/${BETTY_STYLE} "$argument"
+-    ${BIN_PATH}/${BETTY_DOC} "$argument"
+-done
+-
+diff --git a/more_functions_nested_loops/3-print_numbers.c b/more_functions_nested_loops/3-print_numbers.c
+index 90754df..aefd583 100644
+--- a/more_functions_nested_loops/3-print_numbers.c
++++ b/more_functions_nested_loops/3-print_numbers.c
+@@ -10,7 +10,7 @@ void print_numbers(void)
+ 
+ 	for (c = 0; c <= 9; c++)
+ 	{
+-		_putchar(c != 9);
++		_putchar(c + 0);
+ 	}
+ 	_putchar('\n');
+ }

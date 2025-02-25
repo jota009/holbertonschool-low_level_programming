@@ -1,4 +1,4 @@
-#include <stdio.h>
+include <stdio.h>
 
 /**
  * main - Entry poin. Prints 1-100 with Fizz-Buzz rules

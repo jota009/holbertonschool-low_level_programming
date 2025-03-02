@@ -33,11 +33,6 @@ char *cap_string(char *str)
 			str[i] = str[i] - 32;
 			capitalize_next = 0;
 		}
-		else if (!capitalize_next && (str[i] >= 'A' && str[i] <= 'Z'))
-		{
-			str[i] = str[i] + 32;
-		}
-
 		if (is_separator)
 		{
 			capitalize_next = 1;

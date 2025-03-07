@@ -1,5 +1,8 @@
 #include "main.h"
 
+/* Function prototype for sqrt_helper*/
+int sqrt_helper(int n, int guess);
+
 /**
  * _sqrt_recursion - Returns the natural square root of a number
  * @n: The number to find the sqaure root of
@@ -9,7 +12,9 @@
  */
 int _sqrt_recursion(int n)
 {
-	return (sqrt_helper(n, 0));
+	if (n < 0)
+		return (-1);
+	return (sqrt_helper(n, 1));
 }
 
 /**

@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	if (operator == NULL)
 	{
 		printf("Error\n");
-	exit (99);
+	exit(99);
 	}
 
 	result = operator(num1, num2);

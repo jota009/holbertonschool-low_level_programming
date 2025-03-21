@@ -12,46 +12,35 @@ void print_all(const char * const format, ...)
 	va_list args;
 	unsigned int i = 0;
 	char *str;
-	char c;
-	int d;
-	double f;
+	char *separator = "";
 
 	va_start(args, format);
 
 	while (format && format[i])
 	{
-		if (format[i] == 'c')
+		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')
 		{
-			c = va_arg(args, int);
-			printf("%c", c);
-		}
-		else if (format[i] == 'i')
-		{
-			d = va_arg(args, int);
-			printf("%d", d);
-		}
-		else if (format[i] == 'f')
-		{
-			f = va_arg(args, double);
-			printf("%f", f);
-		}
-		else if (format[i] == 's')
-		{
-			str = va_arg(args, char *);
-			if (str == NULL)
+			printf("%s", separator);
+			if (format[i] == 'c')
 			{
-				printf("(nil)");
+				printf("%c", va_arg(args, int));
 			}
-			else
+			if (format[i] == 'i')
 			{
-				printf("%s", str);
+				printf("%d", va_arg(args, int));
 			}
+			if (format[i] == 'f')
+			{
+				printf("%f", va_arg(args, double));
+			}
+			if (format[i] == 's')
+			{
+				str = va_arg(args, char *);
+				printf("%s", str ? str : "(nil)");
+			}
+			separator = ", ";
 		}
 		i++;
-		if (format[i])
-		{
-			printf(", ");
-		}
 	}
 
 	va_end(args);

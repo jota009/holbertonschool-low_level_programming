@@ -14,7 +14,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	dlistint_t *current = *h;
 	unsigned int count = 0;
-	dlistint_t *last = *h;
 
 	dlistint_t *newNode = malloc(sizeof(dlistint_t)); /*Allocate memory for the new node*/
 
@@ -50,14 +49,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	/*If the current is NULL, means idx is greater than the length of the list*/
 	if (current == NULL && count < idx)
 	{
-		/*Inserting at the end of the list*/
-		while (last->next != NULL) /* Traverse to the last node*/
-		{
-			last = last->next;
-		}
-		last->next = newNode; /*Link the last node to the new node*/
-		newNode->prev = last; /*Set the new node's prev to last node*/
-		return (newNode);
+		free(newNode);
+		return (NULL);
 	}
 
 	if (current != NULL)

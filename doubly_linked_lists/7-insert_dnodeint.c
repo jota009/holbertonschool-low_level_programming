@@ -48,7 +48,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	}
 
 	/*If the current is NULL, means idx is greater than the length of the list*/
-	if (current == NULL && count == idx)
+	if (current == NULL && count < idx)
 	{
 		/*Inserting at the end of the list*/
 		while (last->next != NULL) /* Traverse to the last node*/

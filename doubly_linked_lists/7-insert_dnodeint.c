@@ -16,30 +16,27 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	dlistint_t *current = *h;
 	unsigned int count = 0;
 
-	dlistint_t *newNode = malloc(sizeof(dlistint_t)); /*Allocate memory for the new node*/
+	dlistint_t *newNode = malloc(sizeof(dlistint_t));
 
 	if (newNode == NULL)
 	{
 		return (NULL);
 	}
 
-	newNode->n = n; /*Set the value of the new node*/
-	newNode->prev = NULL; /*Initialize prev to NULL*/
-	newNode->next = NULL; /*Initialize next to NULL*/
+	newNode->n = n;
+	newNode->prev = NULL;
+	newNode->next = NULL;
 
-	/*If inserting at the head (index 0)*/
 	if (idx == 0)
 	{
-		newNode->next = *h; /*Link the new node to the current head*/
-		if (*h != NULL) /*If the list is not empty*/
+		newNode->next = *h;
+		if (*h != NULL)
 		{
-			(*h)->prev = newNode; /*Set the previous head's prev to the new node*/
+			(*h)->prev = newNode;
 		}
-		*h = newNode; /*Update head to the new node*/
-		return (newNode); /*Return the new node*/
+		*h = newNode;
+		return (newNode);
 	}
-
-	/*Traverse to the position where the new node should be inserted*/
 
 	while (current != NULL && count < idx)
 	{
